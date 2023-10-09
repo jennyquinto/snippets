@@ -11,11 +11,34 @@ body {
 }
 
 nav ul {
+    --_gap: 2rem; /*gap on my ul, underscore indicate a locally scoped custom property*/
+    
     display: flex;
-    gap: 2rem;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+nav li {
+    padding-inline: calc(var(--_gap) / 2);
+    position: relative;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    height: 3px;
+    width: 100%;
+    background: orangered;
+
+    scale: 0 1;
+    transition: scale 250ms;
+}
+
+nav li:hover::after {
+    scale: 1 1;
 }
 
 a {
@@ -25,4 +48,8 @@ a {
     text-transform: uppercase;
     font-weight: 500;
     position: relative;
+}
+
+a:is(:hover, :focus-visible) {
+    opacity: 1;
 }
