@@ -22,23 +22,33 @@ nav ul {
 nav li {
     padding-inline: calc(var(--_gap) / 2);
     position: relative;
+    overflow: hidden;
 }
 
 nav li::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -1rem;
+    bottom: 0;
     height: 3px;
     width: 100%;
     background: orangered;
 
     scale: 0 1;
-    transition: scale 250ms;
+    transition: 
+        scale 250ms,
+        translate 250ms;
 }
 
 nav li:hover::after {
     scale: 1 1;
+}
+
+nav li:hover + li::after {
+    translate: -100%;
+}
+nav li:has(+ :hover)::after {
+    translate: 100%;
 }
 
 a {
