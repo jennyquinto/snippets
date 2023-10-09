@@ -20,7 +20,7 @@ nav ul {
 }
 
 nav li {
-    padding-inline: calc(var(--_gap) / 2);
+    padding: calc(var(--_gap) / 2);
     position: relative;
     overflow: hidden;
 }
@@ -36,8 +36,8 @@ nav li::after {
 
     scale: 0 1;
     transition: 
-        scale 250ms,
-        translate 250ms;
+        scale 300ms var(--_sDelay, 0ms),
+        translate 500ms var(--_tDelay, 0ms);
 }
 
 nav li:hover::after {
@@ -46,9 +46,13 @@ nav li:hover::after {
 
 nav li:hover + li::after {
     translate: -100%;
+    --_sDelay: 300ms;
+    --_tDelay: 200ms;
 }
 nav li:has(+ :hover)::after {
     translate: 100%;
+    --_sDelay: 300ms;
+    --_tDelay: 200ms;
 }
 
 a {
