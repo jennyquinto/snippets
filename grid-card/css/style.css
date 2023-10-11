@@ -1,0 +1,38 @@
+/* custom properties */
+:root {
+    --clr-accent-200: hsl(83, 53%, 59%);
+    --clr-accent-400: hsl(217, 96%, 69%);
+    --clr-accent-600: hsl(244, 77%, 71%);
+    --clr-neutral-100: #fff;
+    --clr-neutral-500: #6a696e;
+    --clr-neutral-900: #000;
+
+    --ff-primary: system-ui, sans-serif;
+
+    --fs-300: .875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.2rem;
+    --fs-600: 1.4rem;
+    --fs-600: 2rem;
+
+    --fw-bold: 700;
+    --fw-semi-bold: 500;
+    --fw-regular: 400;
+
+    --bg-gradient: linear-gradient(to top left, var(--clr-accent-600), var(--clr-accent-400));
+}
+
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* component styles */
+
+/* utility class */
