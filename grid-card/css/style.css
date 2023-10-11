@@ -110,7 +110,7 @@ body {
     transition: background-size 200ms, scale 250ms ease-in-out;
 }
 .front__btn:hover,
-.front__btn:focus-visible {
+.front__btn:focus {
     background-size: 200%;
     scale: 1.05
 }
